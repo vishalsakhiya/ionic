@@ -1,0 +1,53 @@
+<!--
+  Generated template for the NewPage page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<!--<ion-header>
+
+  <ion-navbar>
+    <ion-title>LogIn</ion-title>
+  </ion-navbar>
+
+</ion-header>-->
+
+
+<ion-content class="background">
+
+  <ion-card>
+    <ion-card-header>
+      LogIn Form
+    </ion-card-header>
+    <br />
+    <ion-card-content>
+      <ion-list no-line>
+        <form [formGroup]="LoginForm" (ngSubmit)="submit()">
+          <ion-item>
+            <ion-label floating>Email</ion-label>
+            <ion-input formControlName="email" type="text" value="riddhi@gmail.com" [class.invalid]="!LoginForm.controls.email.valid  && (LoginForm.controls.email.dirty || submitAttempt)"></ion-input>
+          </ion-item>
+          <ion-item *ngIf="!LoginForm.controls.email.valid  && (LoginForm.controls.email.dirty || submitAttempt)">
+            <p>Please enter a valid email.</p>
+          </ion-item>
+
+          <ion-item>
+            <ion-label floating>Password</ion-label>
+            <ion-input formControlName="password" type="password" value="riddhi7874" [class.invalid]="!LoginForm.controls.password.valid  && (LoginForm.controls.password.dirty || submitAttempt)"></ion-input>
+          </ion-item>
+          <ion-item *ngIf="!LoginForm.controls.password.valid  && (LoginForm.controls.password.dirty || submitAttempt)">
+            <p>Please enter a Password.</p>
+          </ion-item>
+
+          <br />
+          <button type="submit" ion-button block outline color="light">Log In</button>
+        </form>
+
+      </ion-list>
+
+
+    </ion-card-content>
+  </ion-card>
+  <button ion-button clear full color="light" (click)='register()'>Don,t have an account? Sign up</button>
+
+</ion-content>

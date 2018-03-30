@@ -1,0 +1,7 @@
+npm install @ionic/app-scripts@latest
+
+ionic g provider LocationTracker
+
+cordova plugin add cordova-background-geolocation-lt
+
+npm install --save @ionic-native/background-geolocation
